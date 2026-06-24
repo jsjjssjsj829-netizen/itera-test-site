@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Itera Demo Store</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="./index.html">Itera Demo Store</a>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="#products">Products</a>
+        <a href="#trust">Trust</a>
+        <a href="#support">Support</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Customer website test target</p>
+          <h1>Simple shop used to prove Itera AI can change real code.</h1>
+          <p>
+            This site is deliberately small so every AI-generated change can be reviewed in GitHub,
+            checked by CI, merged, and deployed.
+          </p>
+          <a class="primary-action" href="#products">Shop demo items</a>
+        </div>
+      </section>
+
+      <section id="products" class="section">
+        <div class="section-heading">
+          <p class="eyebrow">Products</p>
+          <h2>Demo catalog</h2>
+        </div>
+        <div class="product-grid">
+          <article class="product-card">
+            <span class="product-icon" aria-hidden="true">L</span>
+            <h3>Desk Lamp</h3>
+            <p>Warm focused light for late-night work sessions.</p>
+            <button type="button" data-add-cart="Desk Lamp">Add to cart</button>
+          </article>
+          <article class="product-card">
+            <span class="product-icon" aria-hidden="true">K</span>
+            <h3>Quiet Keyboard</h3>
+            <p>Low-profile keys with a calm typing feel.</p>
+            <button type="button" data-add-cart="Quiet Keyboard">Add to cart</button>
+          </article>
+          <article class="product-card">
+            <span class="product-icon" aria-hidden="true">C</span>
+            <h3>Ceramic Cup</h3>
+            <p>A sturdy cup for coffee, tea, or thinking time.</p>
+            <button type="button" data-add-cart="Ceramic Cup">Add to cart</button>
+          </article>
+        </div>
+      </section>
+
+      <section id="trust" class="section trust-band">
+        <div>
+          <p class="eyebrow">Why this site exists</p>
+          <h2>It behaves like a real customer website.</h2>
+        </div>
+        <ul class="trust-list">
+          <li>GitHub App authorization can write pull requests.</li>
+          <li>GitHub Actions validates every proposed change.</li>
+          <li>Vercel, Netlify, or a custom hook can deploy after merge.</li>
+        </ul>
+      </section>
+
+      <section id="support" class="section support-panel">
+        <div>
+          <p class="eyebrow">Support</p>
+          <h2>Give Itera AI something real to improve.</h2>
+          <p>
+            Try feedback such as: "The buying section does not feel trustworthy enough. Add
+            clearer reassurance before checkout."
+          </p>
+        </div>
+        <p class="cart-status" data-cart-status>No items added yet.</p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>Itera Demo Store</span>
+      <span>Real PR, CI, and deploy hook test site.</span>
+    </footer>
+
+    <script src="./main.js" defer></script>
+  </body>
+</html>

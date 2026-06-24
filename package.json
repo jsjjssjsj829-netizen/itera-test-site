@@ -1,0 +1,10 @@
+{
+  "name": "itera-customer-test-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Disposable customer website for testing Itera AI real GitHub, CI, and deployment flows.",
+  "scripts": {
+    "check": "node scripts/check-site.js",
+    "start": "node server.js"
+  }
+}
