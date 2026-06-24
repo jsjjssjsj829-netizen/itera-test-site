@@ -13,7 +13,7 @@ const html = fs.readFileSync(path.join(root, "index.html"), "utf8");
 const css = fs.readFileSync(path.join(root, "styles.css"), "utf8");
 const js = fs.readFileSync(path.join(root, "main.js"), "utf8");
 
-for (const expected of ["Itera Demo Store", "data-add-cart", "data-cart-status"]) {
+for (const expected of ["Itera Demo Store", "data-add-cart", "data-cart-status", "http://127.0.0.1:8787/widget.js", "sdk-task-36f8b9"]) {
   if (!html.includes(expected)) {
     throw new Error(`index.html is missing ${expected}`);
   }
