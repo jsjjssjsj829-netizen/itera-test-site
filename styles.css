@@ -236,3 +236,19 @@ a {
     grid-template-columns: 1fr;
   }
 }
+
+
+/* data-itera-product-trust */
+.product-trust {
+  display: grid;
+  gap: 6px;
+  margin: 14px 0 0;
+  padding: 12px;
+  list-style: none;
+  color: #164e63;
+  background: #ecfeff;
+  border: 1px solid #a5f3fc;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
