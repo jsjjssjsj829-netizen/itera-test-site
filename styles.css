@@ -236,3 +236,43 @@ a {
     grid-template-columns: 1fr;
   }
 }
+
+
+/* data-itera-product-trust */
+.product-trust {
+  display: grid;
+  gap: 6px;
+  margin: 14px 0 0;
+  padding: 12px;
+  list-style: none;
+  color: #164e63;
+  background: #ecfeff;
+  border: 1px solid #a5f3fc;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+
+/* data-itera-ai-example */
+.itera-ai-example {
+  display: grid;
+  gap: 4px;
+  margin-top: 2px;
+}
+
+.itera-ai-example .itera-ai-product-price {
+  margin: 0;
+  color: var(--ink);
+  font-size: 1.1rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.itera-ai-example .itera-ai-shipping-note {
+  margin: 0;
+  color: #b45309;
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
