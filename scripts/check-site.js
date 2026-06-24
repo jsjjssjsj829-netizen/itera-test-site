@@ -30,3 +30,8 @@ if (!js.includes("data-add-cart") || !js.includes("data-cart-status")) {
 }
 
 console.log("Customer test site check passed.");
+
+if (!html.includes("data-itera-product-trust")) throw new Error("index.html is missing product trust marker data-itera-product-trust");
+if (!css.includes("data-itera-product-trust")) throw new Error("styles.css is missing product trust marker data-itera-product-trust");
+
+if (!html.includes("data-itera-ai-example")) throw new Error("index.html is missing AI generated marker data-itera-ai-example");
