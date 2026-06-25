@@ -39,6 +39,11 @@ if (!html.includes("智能生活精选")) {
   throw new Error("index.html is missing replacement text 智能生活精选");
 }
 
+// data-itera-text-replacement-2mc63u
+if (!html.includes("Add")) {
+  throw new Error("index.html is missing replacement text Add");
+}
+
 console.log("Customer test site check passed.");
 
 if (!html.includes("data-itera-product-trust")) throw new Error("index.html is missing product trust marker data-itera-product-trust");
