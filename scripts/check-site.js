@@ -34,6 +34,11 @@ if (!server.includes("/evolveops/deploy")) {
   throw new Error("server.js is missing the local deployment hook endpoint.");
 }
 
+// data-itera-text-replacement-zt4d2v
+if (!html.includes("智能生活精选")) {
+  throw new Error("index.html is missing replacement text 智能生活精选");
+}
+
 console.log("Customer test site check passed.");
 
 if (!html.includes("data-itera-product-trust")) throw new Error("index.html is missing product trust marker data-itera-product-trust");

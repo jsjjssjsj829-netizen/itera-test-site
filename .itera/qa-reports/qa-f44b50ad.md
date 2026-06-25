@@ -1,0 +1,29 @@
+# QA Validation Report qa-f44b50ad
+
+Sandbox Runner 命令通过，QA Agent 允许进入自动 PR 流程。
+
+Decision: `auto_pr_allowed`
+Status: `passed`
+Mode: `managed-command-sandbox`
+Risk score: 38/100
+
+## Checks
+
+- PASSED 补丁文件完整性: 已生成 2 个补丁文件。
+- PASSED Diff 结构检查: 检查 unified diff 头部和冲突标记。
+- WARNING 测试覆盖检查: 未发现测试文件，进入人工 Review 前需要补充验证。
+- PASSED 敏感业务面检查: 未命中高敏感业务面关键词。
+- PASSED 发布闸门检查: 已配置 3 个发布闸门。
+
+## Verification Commands
+
+- `npm run check` (passed) - undefined
+- `npm test` (passed) - undefined
+- `npm run lint` (passed) - undefined
+- `npm run test:e2e` (passed) - undefined
+
+## Next Actions
+
+- 打开 PR
+- 等待 CI 复核
+- 低风险时进入灰度
