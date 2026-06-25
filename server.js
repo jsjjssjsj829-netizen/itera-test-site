@@ -13,6 +13,40 @@ const types = {
 
 const server = http.createServer((req, res) => {
   const pathname = new URL(req.url, `http://127.0.0.1:${port}`).pathname;
+
+  if (req.method === "POST" && pathname === "/evolveops/deploy") {
+    let raw = "";
+    req.setEncoding("utf8");
+    req.on("data", (chunk) => {
+      raw += chunk;
+      if (raw.length > 1024 * 1024) req.destroy();
+    });
+    req.on("end", () => {
+      let payload = {};
+      try {
+        payload = raw ? JSON.parse(raw) : {};
+      } catch {
+        payload = { raw };
+      }
+      const eventPath = path.join(root, "deploy-events.json");
+      const previous = fs.existsSync(eventPath) ? JSON.parse(fs.readFileSync(eventPath, "utf8")) : [];
+      const event = {
+        id: payload.id || `deploy-${Date.now()}`,
+        event: payload.event || "deployment.trigger",
+        receivedAt: new Date().toISOString(),
+        project: payload.project || null,
+        prDraft: payload.prDraft || null,
+      };
+      fs.writeFileSync(eventPath, JSON.stringify([event, ...previous].slice(0, 20), null, 2));
+      res.writeHead(200, {
+        "Content-Type": "application/json; charset=utf-8",
+        "Cache-Control": "no-store",
+      });
+      res.end(JSON.stringify({ ok: true, received: event }));
+    });
+    return;
+  }
+
   const filePath = path.join(root, pathname === "/" ? "index.html" : pathname);
 
   if (!filePath.startsWith(root)) {
